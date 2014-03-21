@@ -11,7 +11,7 @@ app.get('/', function(req, res){
 
 app.get('/api', function(req, res){
 	res.send('Hello Express!');
-	res.send({name: 'Tim', age: 36})
+	res.send({name: 'Tim', age: 36});
 })
 
 app.get('/hi', function(req, res){
