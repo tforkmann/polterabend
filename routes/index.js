@@ -5,9 +5,10 @@
 
 app =	require('../app');
 
+/*
 app.get('/', function(req, res){
 	res.send('Polterabend!');
-})
+})*/
 
 app.get('/api', function(req, res){
 	res.send('Hello Express!');
@@ -22,6 +23,10 @@ app.get('/hi', function(req, res){
 		"<li>lustig</li>",
 		"<li>flexibel</li></ul>"].join("\n");
 	res.send(message);
+})
+
+app.get('/', function(req, res){
+	res.render("home", { title: "Having fun with Express"});
 })
 
 require('./user');
