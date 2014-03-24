@@ -29,8 +29,20 @@ app.get('/name/:name?', function(req, res){
 	res.send(req.param('name', 'default value'));
 })
 
+app.get('/setup', function(req, res){
+	res.format({
+		html: function () { res.send("<h1> Body </h1>"); },
+		json: function () { res.json({message: "Body"}); },
+		text: function () { res.send("body"); }
+	});
+});
+
 app.get('/', function(req, res){
 	res.render("home", { title: "Having fun with Express"});
+})
+
+app.get('/home', function(req, res){
+	res.redirect("/");
 })
 
 require('./user');
