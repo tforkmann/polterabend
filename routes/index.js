@@ -42,7 +42,7 @@ app.get('/', function(req, res){
 })
 
 app.get('/home', function(req, res){
-	res.redirect("/");
+	res.status(302).redirect("/");
 })
 
 require('./user');

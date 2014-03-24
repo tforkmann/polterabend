@@ -3,6 +3,9 @@
  * GET users listing.
  */
 
+var users =['tim', 'sarah', 'evelin', 'uwe', 'steffen', 'kati'];
+
+
 exports.list = function(req, res){
   res.send("respond with a resource");
 };
@@ -17,7 +20,7 @@ app.post('/users', function(req, res){
 	res.send("Creating a new user with the name " + req.body.username + ".");
 })
 
-
+/*
 app.get(/\/users\/(\d*)\/?(edit)?/, function(req, res){
 	// /users/10
 	// /users/10/
@@ -31,4 +34,13 @@ app.get(/\/users\/(\d*)\/?(edit)?/, function(req, res){
 		message = "Viewing " + message;
 	}
 	res.send(message);
+});*/
+
+app.get('/users/:from-:to', function (req, res) {
+	var from = parseInt(req.params.from, 10),
+		to   = parseInt(req.params.to, 10);
+		
+	res.json(users.slice(from, to +1));
+	
 });
+
