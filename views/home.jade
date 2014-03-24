@@ -1,3 +1,6 @@
+include mixins
+
+
 h1 Hallo Gäste
 h2=title
 
@@ -5,6 +8,8 @@ h2=title
 - var fn = function () { return "Hello, Express!!!! "; };
 - var followerCount = 2;
 - var users = [{name: "Tim", email: "tforkmann@gmail.com"}, {name: "Sarah", email: "spfiliatrault@gmail.com"}]
+
+
 
 style
 	li { background: yellow }
@@ -24,5 +29,5 @@ p
 		| You have #{followerCount} followers.
 	
 ul
-	each user in users
-		li #{user.name} &lt;#{user.email}>
+	each user, i in users
+		mixin userLi(user)
