@@ -25,6 +25,10 @@ app.get('/hi', function(req, res){
 	res.send(message);
 })
 
+app.get('/name/:name?', function(req, res){
+	res.send(req.param('name', 'default value'));
+})
+
 app.get('/', function(req, res){
 	res.render("home", { title: "Having fun with Express"});
 })
