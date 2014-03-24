@@ -20,6 +20,7 @@ app.use(express.favicon());
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
+app.use(express.cookieParser());
 app.use(app.router);
 app.use(lessMiddleware(path.join(__dirname, 'source', 'less'), {
   dest: path.join(__dirname, 'public', 'stylesheets'),

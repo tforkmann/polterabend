@@ -23,11 +23,15 @@ app.get('/hi', function(req, res){
 		"<li>lustig</li>",
 		"<li>flexibel</li></ul>"].join("\n");
 	res.send(message);
-})
+});
 
-app.get('/name/:name?', function(req, res){
-	res.send(req.param('name', 'default value'));
-})
+app.get('/name/:name', function(req, res){
+	res.cookie('name', req.params.name).send('<p>To see the cookie in action, <a href="/name"> Go Here</a> </p>');
+});
+
+app.get('/name', function(req, res){
+	res.clearCookie('name').send(req.cookies.name);
+});
 
 app.get('/setup', function(req, res){
 	res.format({
@@ -39,10 +43,23 @@ app.get('/setup', function(req, res){
 
 app.get('/', function(req, res){
 	res.render("home", { title: "Having fun with Express"});
-})
+});
 
 app.get('/home', function(req, res){
 	res.status(302).redirect("/");
 })
+
+
+var count = 0;
+
+app.get('/hello.txt', function(req, res, next){
+	count++;
+	next();
+});
+
+app.get('/count', function(req, res){
+	res.send("" + count + " Views");
+});
+
 
 require('./user');
