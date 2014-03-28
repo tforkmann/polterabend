@@ -33,7 +33,15 @@ app.get('/name', function(req, res){
 	res.clearCookie('name').send(req.cookies.name);
 });
 
-app.get('/setup', function(req, res){
+app.get('/#playlist', function(req, res){
+	res.format({
+		html: function () { res.send("<h1> Body </h1>"); },
+		json: function () { res.json({message: "Body"}); },
+		text: function () { res.send("body"); }
+	});
+});
+
+app.get('/about', function(req, res){
 	res.format({
 		html: function () { res.send("<h1> Body </h1>"); },
 		json: function () { res.json({message: "Body"}); },

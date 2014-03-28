@@ -1,17 +1,16 @@
 extends layout
 
 block content
+
+- var name= "<em>Tim</em>";
+- var fn = function () { return "Hello, Express!!!! "; };
+- var followerCount = 2;
+- var users = [{name: "Tim", email: "tforkmann@gmail.com"}, {name: "Sarah", email: "spfiliatrault@gmail.com"}]
+
 	div.container
 		h1 Polterabend
-		p Hello World
-		h1 Hallo Gäte	
-		- var name= "<em>Tim</em>";
-		- var fn = function () { return "Hello, Express!!!! "; };
-		- var followerCount = 2;
-		- var users = [{name: "Tim", email: "tforkmann@gmail.com"}, {name: "Sarah", email: "spfiliatrault@gmail.com"}]
-	style
-		li { background: yellow }
-	ul#nav
+		p Willkommen beim Poltern!
+		
 		li.current one
 		li !{name}
 		li=fn()
