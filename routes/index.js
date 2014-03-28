@@ -33,14 +33,6 @@ app.get('/name', function(req, res){
 	res.clearCookie('name').send(req.cookies.name);
 });
 
-app.get('/#playlist', function(req, res){
-	res.format({
-		html: function () { res.send("<h1> Body </h1>"); },
-		json: function () { res.json({message: "Body"}); },
-		text: function () { res.send("body"); }
-	});
-});
-
 app.get('/about', function(req, res){
 	res.format({
 		html: function () { res.send("<h1> Body </h1>"); },
@@ -50,13 +42,16 @@ app.get('/about', function(req, res){
 });
 
 app.get('/', function(req, res){
-	res.render("home", { title: "Having fun with Express"});
+	res.render("home", { title: "Polterabend"});
 });
 
 app.get('/home', function(req, res){
 	res.status(302).redirect("/");
 })
 
+app.get('/playlist', function(req, res){
+	res.render("playlist", { title: "Playlist"});
+});
 
 var count = 0;
 
