@@ -49,6 +49,10 @@ app.get('/home', function(req, res){
 	res.status(302).redirect("/");
 })
 
+app.get('/contact', function(req, res){
+	res.render("contact", { title: "Kontakt"});
+})
+
 app.get('/playlist', function(req, res){
 	res.render("playlist", { title: "Playlist"});
 });
