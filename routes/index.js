@@ -69,14 +69,6 @@ app.get('/activities', function(req, res){
 	res.render("activities", { title: "Aktivitäten"});
 });
 
-app.get('/anmeldung', function(req, res){
-	res.render("anmeldung", { title: "Freiwillige Anmeldung"});
-});
-
-app.get('/essensliste', function(req, res){
-	res.render("essensliste", { title: "Essensliste"});
-});
-
 var count = 0;
 
 app.get('/hello.txt', function(req, res, next){
