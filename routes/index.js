@@ -42,10 +42,10 @@ app.get('/about', function(req, res){
 });
 
 app.get('/', function(req, res){
-	res.render("home", { title: "Polterabend"});
+	res.render("index", { title: "Polterabend"});
 });
 
-app.get('/home', function(req, res){
+app.get('/index', function(req, res){
 	res.status(302).redirect("/");
 })
 

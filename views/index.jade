@@ -3,32 +3,9 @@ extends layout
 block content
 
 	div.container
-		h1=title
-		p Willkommen beim Poltern!
-		
-		- var name= "<em>Tim</em>";
-		- var fn = function () { return "Hello, Express!!!! "; };
-		- var followerCount = 2;
-		- var users = [{name: "Tim", email: "tforkmann@gmail.com"}, {name: "Sarah", email: "spfiliatrault@gmail.com"}]
-		style
-			li { background: yellow }
-		ul#nav
-			li.current one
-			li !{name}
-			li=fn()
-				a(href="/other") Go to other  
-				p 
-					if followerCount === 0
-						| You have no followers.
-					else if followerCount === 1
-						| You have one followers
-					else
-						| You have #{followerCount} followers.
-
-				ul
-				each userObject, i in users
-					include user
-					
+		div.jumbotron
+			h1=title
+			p Willkommen to #{title}
 		#myCarousel.carousel.slide
 			ol.carousel-indicators
 				li.active(data-target='#myCarousel', data-slide-to='0')
@@ -36,7 +13,7 @@ block content
 				li(data-target='#myCarousel', data-slide-to='2')
 			.carousel-inner
 				.item.active
-					img(src='data:image/png;base64,', data-src='#{pathToAssets}/assets/js/holder.js/100%x500/auto/#777:#7a7a7a/text:First slide', alt='First slide')
+					<img src="/images/index/bgaa_lichtensee.jpg", alt="Biogasaufbereitung Lichtensee", width="1200", height="600">
 					.container
 						.carousel-caption
 							h1 Example headline.

@@ -1,21 +1,45 @@
 div.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
 	div.container
 		div.navbar-header
-			button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+			button.navbar-toggle(type="button", data-toggle="collapse", data-target=".navbar-collapse")
 				span.icon-bar
 				span.icon-bar
 				span.icon-bar
-			a.navbar-brand(href="home")
+			a.navbar-brand(href="index")
 				| Polterabend
 		div.collapse.navbar-collapse
 			ul.nav.navbar-nav
-				li.active
-					a(href="home") Home
+				li.dropdown
+					a.dropdown-toggle(href='#', data-toggle='dropdown')
+						| Unternehmen
+						b.caret
+						ul.dropdown-menu
+							li
+								a(href='#') Unternehmensgruppe
+							li
+								a(href='unternehmensverbund') Unternehmensverbund
+							li
+								a(href='gruppenmitglieder') Gruppenmitglieder
 				li
-					a(href="about") Über
+					a(href="leistungen") Leistungen
 				li
-					a(href="playlist") Playlist
+					a(href="biogas") Biogas
 				li
-					a(href="infos") Infos
-				li
-					a(href="contact") Kontakt
+					a(href="energiecontracting") Was ist Energiecontracting?
+				li.dropdown
+					a.dropdown-toggle(href="#", data-toggle="dropdown")
+						| Mediathek
+						b.caret
+					ul.dropdown-menu
+						li
+							a(href="#") Download
+						li
+							a(href="referenzen") Referenzen
+						li
+							a(href="#") Mediathek
+						//- li.divider
+					//- li.dropdown-header Nav header
+					//- li
+					//- 	a(href='#') Separated link
+					//- li
+					//- 	a(href='#') One more separated link
