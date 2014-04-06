@@ -53,8 +53,28 @@ app.get('/contact', function(req, res){
 	res.render("contact", { title: "Kontakt"});
 })
 
+app.get('/location', function(req, res){
+	res.render("location", { title: "Unterkunft"});
+});
+
 app.get('/playlist', function(req, res){
-	res.render("playlist", { title: "Playlist"});
+	res.render("playlist", { title: "Playlist - Musikwünsche"});
+});
+
+app.get('/unterkunft', function(req, res){
+	res.render("unterkunft", { title: "Mögliche Unterkünfte"});
+});
+
+app.get('/activities', function(req, res){
+	res.render("activities", { title: "Aktivitäten"});
+});
+
+app.get('/anmeldung', function(req, res){
+	res.render("anmeldung", { title: "Freiwillige Anmeldung"});
+});
+
+app.get('/essensliste', function(req, res){
+	res.render("essensliste", { title: "Essensliste"});
 });
 
 var count = 0;
@@ -67,6 +87,5 @@ app.get('/hello.txt', function(req, res, next){
 app.get('/count', function(req, res){
 	res.send("" + count + " Views");
 });
-
 
 require('./user');
