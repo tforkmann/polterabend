@@ -3,9 +3,6 @@ extends layout
 block content
 
 	div.container
-		div.jumbotron
-			h1=title
-			p Willkommen zum #{title}
 		#myCarousel.carousel.slide
 			ol.carousel-indicators
 				li.active(data-target='#myCarousel', data-slide-to='0')
@@ -16,16 +13,16 @@ block content
 					<img src="/images/index/sarah_poltern.jpg", alt="Sarah beim Poltern", width="1200", height="400">
 					.container
 						.carousel-caption
-							h1 Example headline.
+							h1 Sarah beim Poltern.
 							p
 								| Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							p
 								a.btn.btn-large.btn-primary(href='#') Sign up today
 				.item
-					img(src='data:image/png;base64,', data-src='#{pathToAssets}/assets/js/holder.js/100%x500/auto/#777:#7a7a7a/text:Second slide', alt='Second slide')
+					<img src="/images/index/Scherben_Polterabend.jpg", alt="Glückbringende Scherben", width="1200", height="400">
 					.container
 						.carousel-caption
-							h1 Another example headline.
+							h1 Glückbringende Scherben.
 							p
 								| Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
 							p

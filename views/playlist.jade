@@ -6,3 +6,14 @@ block content
 		h1=title
 		p Musikwünsche bitte hier eintragen!
 		
+		form(method="POST", action="/user")
+			input(type="hidden", name="_method", value="PUT")
+		p Artist
+			input(type="text", name="artist")
+		p Lied
+			input(type="text", name="lied")
+		p Album
+			input(type="text", name="Album")
+		p
+			input(type="submit")
+		
