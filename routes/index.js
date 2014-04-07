@@ -54,7 +54,7 @@ app.get('/contact', function(req, res){
 })
 
 app.get('/location', function(req, res){
-	res.render("location", { title: "Unterkunft"});
+	res.render("location", { title: "Location"});
 });
 
 app.get('/playlist', function(req, res){
