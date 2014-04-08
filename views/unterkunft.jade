@@ -2,7 +2,26 @@ extends layout
 
 block content
 
-	div.container 
+	div.container.marketing
 		div.jumbotron
 			h1=title
 			p Hier ist eine Liste von möglichen Unterkunften in Zwintschöna und Umgebung!
+		hr.featurette-divider
+		.row.featurette
+			.col-md-7
+				h2.featurette-heading
+					| Zeltplatz Zwintschöna.
+					span.text-muted Bitte Zelt mitbrigen.
+				p.lead
+					| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+			.col-md-5
+				<img src="/images/unterkunft/bad_zwintschöna.jpg", alt="Sarah beim Poltern", width="500", height="500">
+		hr.featurette-divider
+		.row.featurette
+			.col-md-5
+			.col-md-7
+				h2.featurette-heading
+					| First featurette heading.
+					span.text-muted It'll blow your mind.
+				p.lead
+					| Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.

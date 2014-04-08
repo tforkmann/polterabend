@@ -2,7 +2,103 @@ extends layout
 
 block content
 
-	div.container 
-		div.jumbotron
-			h1=title
-			p Zusätzlich zum Poltern können folgende Dinge auf der Location unternommen werden.
+	.heading 
+		.container
+			.row
+				.col-md-12
+					h2 
+						span=title
+		.content-bg.kontakt
+			.container
+				.row
+					.col-md-12
+						h3.headline
+							span
+								p So sind wir erreichbar
+					.col-md-6
+						p
+							| innenmehr
+							br
+							| Privatinstitut für Persönlichkeitsentwicklung
+							br
+							| Anja Lindau & Holger Kurth GbR
+							br
+							| Am Tempelhofer Berg 7d
+							br
+							| 10965 Berlin
+						p Im 2. OG des Hinterhauses der ehemaligen Schultheissbrauerei
+					.col-md-6
+						ul.icon-list
+							li.mail.col-sm-6
+								h5 Email
+								h6 a(href='mailto:info@innenmehr.de', title='info@innenmehr.de') info@innenmehr.de
+							li.tel.col-sm-6.col-md-12
+								h5 Telefonnummer
+								h6 030 / 690 042 67
+							li.open.col-sm-6.col-md-12
+								h5 Öffnungszeiten
+								h6 Montag - Freitag 11:00 - 17:00 Uhr
+					.clearfix
+					.col-md-12.kontakt-image-responsive
+						.csc-textpic.csc-textpic-intext-right
+							.csc-textpic-imagewrap
+								figure.csc-textpic-image.csc-textpic-last
+								img(src='uploads/pics/schultheissbrauerei-kreuzberg.jpg', width='1050', height='550', alt='')
+							.csc-textpic-text
+			.container
+				.row
+					.col-md-12
+						h3.headline
+							span
+								p Nimm hier Kontakt mit uns auf
+					.Tx-Formhandler
+						.error_message
+							h4 Bitte folgende Felder ausfüllen:
+							ul.error_messages
+						form#contactform(role='form', method='post', action='kontakt.html', name='contactform')
+						fieldset(style='display: none;')
+						input(type='hidden', name='id', value='8')
+						input(type='hidden', name='formhandler[submitted]', value='1')
+						input(type='hidden', name='formhandler[randomID]', value='2134b70094c6d9c0198631ea61f0fbf9')
+						input#removeFile-2134b70094c6d9c0198631ea61f0fbf9(type='hidden', name='formhandler[removeFile]', value='')
+						input#removeFileField-2134b70094c6d9c0198631ea61f0fbf9(type='hidden', name='formhandler[removeFileField]', value='')
+						input#submitField-2134b70094c6d9c0198631ea61f0fbf9(type='hidden', name='formhandler[submitField]', value='')
+						input#ieHiddenField-2134b70094c6d9c0198631ea61f0fbf9(type='hidden', name='formhandler[step-2-next]', value='1')
+						.form-wrap
+							.col-md-6.col-sm-6
+								.right
+									input.form-control(type='text', name='formhandler[name]', value='', placeholder='Name')
+									input.form-control(type='text', name='formhandler[anschrift]', value='', placeholder='Anschrift')
+									input.form-control(type='text', name='formhandler[plz]', value='', placeholder='PLZ & Ort')
+							.col-md-6.col-sm-6
+								.left
+									input.form-control(type='text', name='formhandler[phone]', value='', placeholder='Telefon')
+									input.form-control(type='text', name='formhandler[email]', value='', placeholder='Email')
+									select#drop1(name='subject')
+										option Anliegen
+										option Anfrage
+										option Raum mieten
+										option Sonstiges
+							.clearfix
+							.col-md-12
+								textarea.form-control(name='formhandler[comments]', value='', placeholder='Nachricht')
+							.clearfix
+							.col-md-12
+								input#submit.button.contact-submit(type='submit', value='Absenden')
+								img.loader(src='/fileadmin/templates/innenmehr/img/bg/icons/ajax-loader.gif')
+			#anfahrt
+				.container
+					.row
+						.col-md-12
+							h3.headline
+								span
+									p Wie komme ich zu innenmehr?
+						.col-md-12
+							#map_canvas(style='width: 100%; height: 450px;')
+				.fast-ct
+					.container
+						.row
+							.col-md-12
+								h3 Fragen zu einem Seminar, Termin oder du willst einfach nur einen Raum mieten?
+								h4 030 / 690 042 67
+								h5 Montag - Freitag 11:00 - 17:00 Uhr
