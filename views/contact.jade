@@ -14,13 +14,17 @@ block content
 					.col-md-12
 						h3.headline
 							span
-								p So sind wir erreichbar
+								p.lead
+								| Ansprechpartner vom Polterabend sind:
+								p.lead
+								| Evelin Forkmann
+								p.lead
+								| Tim Forkmann
 					.clearfix
 					.col-md-12.kontakt-image-responsive
 						.csc-textpic.csc-textpic-intext-right
 							.csc-textpic-imagewrap
 								figure.csc-textpic-image.csc-textpic-last
-								img(src='uploads/pics/schultheissbrauerei-kreuzberg.jpg', width='1050', height='550', alt='')
 							.csc-textpic-text
 			.container
 				.row
@@ -54,28 +58,10 @@ block content
 									select#drop1(name='subject')
 										option Anliegen
 										option Anfrage
-										option Raum mieten
 										option Sonstiges
 							.clearfix
 							.col-md-12
 								textarea.form-control(name='formhandler[comments]', value='', placeholder='Nachricht')
 							.clearfix
 							.col-md-12
-								input#submit.button.contact-submit(type='submit', value='Absenden')
-								img.loader(src='/fileadmin/templates/innenmehr/img/bg/icons/ajax-loader.gif')
-			#anfahrt
-				.container
-					.row
-						.col-md-12
-							h3.headline
-								span
-									p Wie komme ich zu innenmehr?
-						.col-md-12
-							#map_canvas(style='width: 100%; height: 450px;')
-				.fast-ct
-					.container
-						.row
-							.col-md-12
-								h3 Fragen zu einem Seminar, Termin oder du willst einfach nur einen Raum mieten?
-								h4 030 / 690 042 67
-								h5 Montag - Freitag 11:00 - 17:00 Uhr
+								button.btn.btn-success(type='submit') Absenden
