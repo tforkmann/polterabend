@@ -10,7 +10,6 @@ var lessMiddleware = require('less-middleware');
 var app = module.exports = express();
 //var seojs = require('express-seojs');
 
-
 // all environments
 app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
@@ -32,6 +31,7 @@ app.use(lessMiddleware(path.join(__dirname, 'source', 'less'), {
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use(seojs('your_secret_api_token'));
+
 
 
 // development only

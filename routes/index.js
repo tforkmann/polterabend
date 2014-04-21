@@ -42,7 +42,7 @@ app.get('/about', function(req, res){
 });
 
 app.get('/', function(req, res){
-	res.render("index", { title: "Polterabend"});
+	res.render("index", { title: "Polterabend von Tim und Sarah"});
 });
 
 app.get('/index', function(req, res){

@@ -3,13 +3,16 @@ extends layout
 block content
 
 	div.container
+		.jumbotron.text-center
+			h1=title
+			p Am 26.7.2014 wird im Friedrichsbad Zwintschöna gepoltert.
 		#myCarousel.carousel.slide
 			ol.carousel-indicators
 				li.active(data-target='#myCarousel', data-slide-to='0')
 				li(data-target='#myCarousel', data-slide-to='1')
 			.carousel-inner
 				.item.active
-					<img src="/images/index/sarah_poltern.jpg", width="1400" height="500" alt="Sarah beim Poltern">
+					<img src="/images/index/sarah_poltern.jpg", width="1200" height="400" alt="Sarah beim Poltern">
 					.container
 						.carousel-caption
 							h1 Sarah beim Poltern.
