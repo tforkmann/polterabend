@@ -12,7 +12,7 @@ var app = module.exports = express();
 
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 4000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(express.bodyParser());
@@ -32,6 +32,7 @@ app.use(lessMiddleware(path.join(__dirname, 'source', 'less'), {
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 //app.use(seojs('your_secret_api_token'));
+
 
 // development only
 if ('development' == app.get('env')) {
