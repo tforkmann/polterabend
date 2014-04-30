@@ -3,60 +3,43 @@ extends layout
 block content
 
 	div.container
-		div.col-xs-12.col-sm-9
-			.jumbotron(text-style="center")
-				h1=title
-				p Zusätzlich zum Poltern können folgende Dinge auf der Location unternommen werden.
-			.row
-				.col-6.col-sm-6.col-lg-4
-					h2 Schwimmen
-					p
-						| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-					p
-					a.btn.btn-default(href='#', role='button') View details »
-				.col-6.col-sm-6.col-lg-4
-					h2 Volleyball
-					p
-						| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-					p
-					a.btn.btn-default(href='#', role='button') View details »
-				.col-6.col-sm-6.col-lg-4
-					h2 Tanzen
-					p
-						| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-					p
-					a.btn.btn-default(href='#', role='button') View details »
-				.col-6.col-sm-6.col-lg-4
-					h2 Porzellan vergessen
-					p
-					| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-					p
-					a.btn.btn-default(href='#', role='button') View details »
-				.col-6.col-sm-6.col-lg-4
-					h2 Zelten
-					p
-						| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-					p
-					a.btn.btn-default(href='#', role='button') View details »
-				.col-6.col-sm-6.col-lg-4
-					h2 Bierpongturnier
-					p
-						| Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-					p
-					a.btn.btn-default(href='#', role='button') View details »
-	div.container.marketing
-		hr.featurette-divider
-		.row.featurette
-			.col-md-7
-				h2.featurette-heading
-					| Badestelle
-					span.text-muted Bitte bringt Eure Badesachen mit.
-			.col-md-5
-				<img src="/images/unterkunft/bad_zwintschöna.jpg", alt="Sarah beim Poltern", width="500", height="200">
+		.jumbotron(text-style="center")
+			h1=title
+			p Zusätzlich zum Poltern können folgende Dinge auf der Location unternommen werden.
 		hr.featurette-divider
 		.row.featurette
 			.col-md-5
+				<img src="/images/unterkunft/arc-hotel.jpg", alt="arc-hotel", width="400", height="200">
 			.col-md-7
 				h2.featurette-heading
-					| Volleyball
-					span.text-muted Wer lust auf Volleyball hat kann das gerne machen.
+					| Schwimmen.
+					span.text-muted 	Im Freibad kann natürlich geplanscht werden. Also bitte bringt Eure Badesachen mit.
+		.row.featurette
+			.col-md-7
+				h2.featurette-heading
+					| Beach-Volleyball
+					span.text-muted 	Das Freibad verfügt über drei Plätze. Ein Ball wird sich schon finden lassen.
+			.col-md-5
+				<img src="/images/unterkunft/hotel-konsul.jpg", alt="hotel konsul", width="400", height="200"
+		.row.featurette
+			.col-md-5
+				<img src="/images/unterkunft/arc-hotel.jpg", alt="arc-hotel", width="400", height="200">
+			.col-md-7
+				h2.featurette-heading
+					| Tanzen.
+					span.text-muted 	Kreative Tanzstile sind erwünscht. Die klassischen Hüftbewegungen sind auch ok.
+		.row.featurette
+			.col-md-7
+				h2.featurette-heading
+					| Zelten
+					span.text-muted 	Direkt am Freibad ist ein Zeltplatz, wo man gut Zelten kann. 
+					a.btn.btn-default(href='unterkunft', role='button') Hier findet ihr weiter Details »
+			.col-md-5
+				<img src="/images/unterkunft/hotel-konsul.jpg", alt="hotel konsul", width="400", height="200"
+		.row.featurette
+			.col-md-5
+				<img src="/images/unterkunft/arc-hotel.jpg", alt="arc-hotel", width="400", height="200">
+			.col-md-7
+				h2.featurette-heading
+					| Bierpongturnier.
+					span.text-muted 	Lasst Euch überraschen...
