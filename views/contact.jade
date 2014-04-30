@@ -2,64 +2,14 @@ extends layout
 
 block content
 
-	.heading 
-		.container
-			.row
-				.col-md-12
-					h2 
-						span=title
-		.content-bg.kontakt
-			.container
-				.row
-					.col-md-12
-						h2
-							span Ansprechpartner vom Polterabend sind:
-						p.lead
-							| Evelin Forkmann, Georg-Cantor-Str.9, 06108 Halle/Saale, 0345/3889062
-						p.lead
-							| Tim Forkmann, Haubachstr. 30, 10585 Berlin, 017683234025, tforkmann@gmail.com
-					.clearfix
-					.col-md-12.kontakt-image-responsive
-						.csc-textpic.csc-textpic-intext-right
-							.csc-textpic-imagewrap
-								figure.csc-textpic-image.csc-textpic-last
-							.csc-textpic-text
-			.container
-				.row
-					.col-md-12
-						h3.headline
-							span
-								p Nimm hier Kontakt mit uns auf
-					.Tx-Formhandler
-						.error_message
-							h4 Bitte folgende Felder ausfüllen:
-							ul.error_messages
-						form#contactform(role='form', method='post', action='kontakt.html', name='contactform')
-						fieldset(style='display: none;')
-						input(type='hidden', name='id', value='8')
-						input(type='hidden', name='formhandler[submitted]', value='1')
-						input(type='hidden', name='formhandler[randomID]', value='2134b70094c6d9c0198631ea61f0fbf9')
-						input#removeFile-2134b70094c6d9c0198631ea61f0fbf9(type='hidden', name='formhandler[removeFile]', value='')
-						input#removeFileField-2134b70094c6d9c0198631ea61f0fbf9(type='hidden', name='formhandler[removeFileField]', value='')
-						input#submitField-2134b70094c6d9c0198631ea61f0fbf9(type='hidden', name='formhandler[submitField]', value='')
-						input#ieHiddenField-2134b70094c6d9c0198631ea61f0fbf9(type='hidden', name='formhandler[step-2-next]', value='1')
-						.form-wrap
-							.col-md-6.col-sm-6
-								.right
-									input.form-control(type='text', name='formhandler[name]', value='', placeholder='Name')
-									input.form-control(type='text', name='formhandler[anschrift]', value='', placeholder='Anschrift')
-									input.form-control(type='text', name='formhandler[plz]', value='', placeholder='PLZ & Ort')
-							.col-md-6.col-sm-6
-								.left
-									input.form-control(type='text', name='formhandler[phone]', value='', placeholder='Telefon')
-									input.form-control(type='text', name='formhandler[email]', value='', placeholder='Email')
-									select#drop1(name='subject')
-										option Anliegen
-										option Anfrage
-										option Sonstiges
-							.clearfix
-							.col-md-12
-								textarea.form-control(name='formhandler[comments]', value='', placeholder='Nachricht')
-							.clearfix
-							.col-md-12
-								button.btn.btn-success(type='submit') Absenden
+	div.container
+		.jumbotron(text-style="center")
+			h1=title
+		.row
+			.col-md-12
+				h2
+					span Ansprechpartner vom Polterabend sind:
+				p.lead
+					| Evelin Forkmann, 0151-27078061, eviforkmann@gmx.de
+				p.lead
+					| Tim Forkmann, 0176-83234025, tforkmann@gmail.com

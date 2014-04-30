@@ -3,11 +3,6 @@ extends layout
 block content
 
 	div.container 
-		div.jumbotron
-			h1=title
-			p Gepoltert wird in Zwintschöna
-		#anfahrt
-		
 		.content-bg.kontakt
 			.row
 				.col-md-12
@@ -19,10 +14,6 @@ block content
 							| Reideburger Str. 20
 						p.lead
 							| 06184 Kabelsketal OT Dieskau
-		.row
-			.col-md-12
-				h3.headline
-					span
-						p Wie komme ich zur Location?
-			.col-md-12
-				#map_canvas(style='width: 100%; height: 450px;')
+						p.lead
+							a.btn.btn-default(href='https://www.google.de/maps/place/Am+Friedrichsbad/@51.4571248,12.0488672,17z/data=!3m1!4b1!4m2!3m1!1s0x47a663c4518416dd:0x8ef9c7ce31b0b949', role='button') Hier geht's zu Google maps »
+		<img src="/images/location/location.png", alt="location", width="1200", height="600">
